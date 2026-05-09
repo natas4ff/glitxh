@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "glitxh"
-version = "0.3.0"
+version = "0.4.0"
 description = "Script glitxh"
 license = {text = "MIT"}
 authors = [{name = "Nataza", email = "nataza@ichigo.me"}]
