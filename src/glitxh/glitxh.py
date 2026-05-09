@@ -677,9 +677,12 @@ def worker(region):
             if total_accounts>0 and success_count>=total_accounts: return
 
 # ══════════════════════════════════════════════════════════════════
-#  MAIN
+#  MAIN FUNCTION
 # ══════════════════════════════════════════════════════════════════
-if __name__=="__main__":
+def main():
+    global total_accounts, num_workers, success_count, _stuck_running
+    global last_progress_time, last_progress_count, start_time_progress, _last_success
+
     while True:
         os.system('cls' if os.name=='nt' else 'clear')
         print(f"{render('x6ataza',colors=['white','red'],align='center')}\n\n")
@@ -703,8 +706,10 @@ if __name__=="__main__":
         except: pass
 
         # Reset
-        success_count=0; _stuck_running=True
-        last_progress_time=time.time(); last_progress_count=0
+        success_count=0
+        _stuck_running=True
+        last_progress_time=time.time()
+        last_progress_count=0
         for k in tier_stats: tier_stats[k]=0
         cached_tf(region)
 
@@ -742,3 +747,6 @@ if __name__=="__main__":
                 try: _TOR_PROC.terminate()
                 except: pass
             break
+
+if __name__ == "__main__":
+    main()
