@@ -259,7 +259,7 @@ REGION_LANG = {"ME":"ar","IND":"hi","ID":"id","VN":"vi","TH":"th","BD":"bn",
                "PK":"ur","TW":"zh","EU":"en","CIS":"ru","NA":"en","SAC":"es",
                "BR":"pt","SG":"en"}
 
-BASE_DIR = "GLITXH-VIP"
+BASE_DIR = "/sdcard/GLITXH-VIP"
 _tf_cache = {}
 
 def get_tier_files(region):
