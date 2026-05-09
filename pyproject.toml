@@ -7,7 +7,7 @@ name = "glitxh"
 version = "0.2.0"
 description = "Script glitxh"
 license = {text = "MIT"}
-authors = [{name = "Namamu", email = "email@contoh.com"}]
+authors = [{name = "Nataza", email = "nataza@ichigo.me"}]
 dependencies = []
 
 [tool.setuptools.packages.find]
