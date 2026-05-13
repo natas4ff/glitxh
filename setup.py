@@ -10,7 +10,7 @@ extensions = [
 
 setup(
     name="glitxh",
-    version="0.5.1",
+    version="0.5.0",
 
     package_dir={"": "src"},
     packages=find_packages(where="src"),
