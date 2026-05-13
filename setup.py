@@ -1,17 +1,19 @@
-from setuptools import setup, Extension
+from setuptools import setup, Extension, find_packages
 from Cython.Build import cythonize
 
 extensions = [
     Extension(
-        "glitxh.main",
-        ["glitxh/main.py"]
+        "glitxh.__main__",
+        ["src/glitxh/__main__.py"]
     ),
 ]
 
 setup(
     name="glitxh",
     version="0.5.0",
-    packages=["glitxh"],
+
+    package_dir={"": "src"},
+    packages=find_packages(where="src"),
 
     ext_modules=cythonize(
         extensions,
