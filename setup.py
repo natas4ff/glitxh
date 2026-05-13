@@ -1,12 +1,6 @@
-from setuptools import setup, Extension, find_packages
+from setuptools import setup, find_packages
 from Cython.Build import cythonize
-
-extensions = [
-    Extension(
-        "glitxh.glitxh",
-        ["src/glitxh/glitxh.py"]
-    ),
-]
+import glob
 
 setup(
     name="glitxh",
@@ -16,7 +10,7 @@ setup(
     packages=find_packages(where="src"),
 
     ext_modules=cythonize(
-        extensions,
+        glob.glob("src/glitxh/*.py"),
         compiler_directives={
             "language_level": "3"
         }
