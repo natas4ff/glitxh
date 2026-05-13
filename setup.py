@@ -3,14 +3,14 @@ from Cython.Build import cythonize
 
 extensions = [
     Extension(
-        "glitxh.__main__",
-        ["src/glitxh/__main__.py"]
+        "glitxh.glitxh",
+        ["src/glitxh/glitxh.py"]
     ),
 ]
 
 setup(
     name="glitxh",
-    version="0.5.0",
+    version="0.5.1",
 
     package_dir={"": "src"},
     packages=find_packages(where="src"),
