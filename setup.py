@@ -1,18 +1,11 @@
-from setuptools import setup
-from Cython.Build import cythonize
-import os
-
-files = []
-
-for file in os.listdir():
-    if file.endswith(".py") and file != "setup.py":
-        files.append(file)
+from setuptools import setup, find_packages
 
 setup(
-    ext_modules=cythonize(
-        files,
-        compiler_directives={
-            'language_level': "3"
-        }
-    )
+    name="glitxh",
+    version="0.5.5",
+
+    package_dir={"": "src"},
+    packages=find_packages(where="src"),
+
+    zip_safe=False,
 )
