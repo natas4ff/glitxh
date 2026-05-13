@@ -29,9 +29,9 @@ jobs:
       run: |
         python setup.py build_ext --inplace
 
-    - name: Remove source
+    - name: Remove source files
       run: |
-        find glitxh -name "*.py" ! -name "__init__.py" -delete
+        find src/glitxh -name "*.py" ! -name "__init__.py" -delete
 
     - name: Build wheel
       run: |
