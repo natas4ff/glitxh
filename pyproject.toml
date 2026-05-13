@@ -1,3 +1,14 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "glitxh"
+version = "0.5.5"
+description = "Script glitxh"
+license = {text = "MIT"}
+authors = [{name = "Namamu", email = "email@contoh.com"}]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
