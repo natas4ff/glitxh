@@ -3,19 +3,15 @@ from Cython.Build import cythonize
 
 extensions = [
     Extension(
-        "yourpackage.main",
-        ["yourpackage/main.py"]
+        "glitxh.main",
+        ["glitxh/main.py"]
     ),
-    Extension(
-        "yourpackage.api",
-        ["yourpackage/api.py"]
-    )
 ]
 
 setup(
-    name="yourpackage",
-    version="1.0.0",
-    packages=["yourpackage"],
+    name="glitxh",
+    version="0.5.0",
+    packages=["glitxh"],
 
     ext_modules=cythonize(
         extensions,
